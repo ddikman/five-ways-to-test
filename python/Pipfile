@@ -9,6 +9,7 @@ verify_ssl = true
 pytest = "*"
 pytest-watch = "*"
 pytest-cov = "*"
+requests = "*"
 
 [requires]
 python_version = "3.8"

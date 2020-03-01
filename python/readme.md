@@ -41,6 +41,12 @@ For TDD we:
 
 This practice starts in [test_tdd.py](tdd/test_tdd.py) as we are starting with the test, so open that file and check the instructions there.
 
+### learning
+
+The learning tests are about using a test suite to drive your development, allowing you to run the code without having to run your entire app. In this example I'm using an open book api and for practice you can use the [Chuck Norris joke API](http://www.icndb.com/api/).
+
+Have a look at the [test_learning.py](learning/test_learning.py) for how I step by step figure out how the API works. Then have a go for yourself in [practice_learning.py](learning/practice_learning.py) using [test_practice_learning.py](learning/test_practice_learning.py) as runner.
+
 ## troublshooting
 
 The project is written using [VSCode](https://code.visualstudio.com/).
