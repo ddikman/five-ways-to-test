@@ -49,3 +49,11 @@ The project is written using [VSCode](https://code.visualstudio.com/).
 1. Make sure you open the `python` project and not the root folder, otherwise VSCode might not find the pipenv file
 2. Select your [environment](https://code.visualstudio.com/docs/python/environments)
 3. Troubleshoot [linting setup](https://donjayamanne.github.io/pythonVSCodeDocs/docs/troubleshooting_linting/).
+
+Also, without creating a virtual environment, vscode will default to the global installation of python. To adress this, run:
+
+```shell script
+python -m venv .venv
+```
+
+Read more in [environments for vscode](https://code.visualstudio.com/docs/python/environments).
