@@ -8,7 +8,7 @@ Uses [pipenv](https://docs.python-guide.org/dev/virtualenvs/) to manage dependen
 pipenv install
 ```
 
-## running tests
+## running tests
 
 Each sub project (way of testing) contains three files:
 - `practice_{project_name}.py` | contains the practice for you to implement
@@ -27,11 +27,11 @@ Or, to have the runner continously re-run all tests:
 pipenv run pytest-watch
 ```
 
-## exercises
+## exercises
 
 Each project shows a method, so follow these instructions to try it out.
 
-### tdd
+### tdd
 
 For TDD we:
 
