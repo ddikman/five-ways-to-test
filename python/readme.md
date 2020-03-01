@@ -40,3 +40,11 @@ For TDD we:
 3. Refactor to make it clean
 
 This practice starts in [test_tdd.py](tdd/test_tdd.py) as we are starting with the test, so open that file and check the instructions there.
+
+## troublshooting
+
+The project is written using [VSCode](https://code.visualstudio.com/).
+
+1. Make sure you open the `python` project and not the root folder, otherwise VSCode might not find the pipenv file
+2. Select your [environment](https://code.visualstudio.com/docs/python/environments)
+3. Troubleshoot [linting setup](https://donjayamanne.github.io/pythonVSCodeDocs/docs/troubleshooting_linting/).
