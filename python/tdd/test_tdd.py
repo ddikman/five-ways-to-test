@@ -12,12 +12,12 @@ from pytest import raises
 from random import randint
 import timeit
 
+def test_one_is_not_a_prime():
+  assert is_prime(1) == False
+
 def test_no_even_number_is_a_prime():
   even_number = randint(7, 20) * 2
   assert is_prime(even_number) == False
-
-def test_one_is_not_a_prime():
-  assert is_prime(1) == False
 
 def test_zero_is_not_a_prime():
   assert is_prime(0) == False
