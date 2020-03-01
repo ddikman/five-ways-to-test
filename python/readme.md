@@ -1,19 +1,14 @@
 # five-ways-to-test python
 
-## setup
+The project contains four folders for describing different testing methods. Under `exercises` below, you'll find details on how to approach each of these.
 
-Uses [pipenv](https://docs.python-guide.org/dev/virtualenvs/) to manage dependencies required.
+## running tests
+
+The project uses [pipenv](https://docs.python-guide.org/dev/virtualenvs/) to manage dependencies required, so before anything else:
 
 ```shell script
 pipenv install
 ```
-
-## running tests
-
-Each sub project (way of testing) contains three files:
-- `practice_{project_name}.py` | contains the practice for you to implement
-- `example_{project_name}.py` | contains an example implementation to help if you get stuck
-- `test_{project_name}.py` | contains example tests for you to use or implement
 
 You can run the tests by:
 
