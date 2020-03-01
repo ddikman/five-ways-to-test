@@ -24,5 +24,4 @@ def example_find_first_author(book_name):
   url = "http://openlibrary.org/search.json?q=" + search
   response = requests.get(url)
   json = response.json()
-  print(json)
   return json["docs"][0]["author_name"][0]
