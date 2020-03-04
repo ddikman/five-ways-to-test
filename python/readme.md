@@ -13,7 +13,7 @@ pipenv install
 Run tests by:
 
 ```shell script
-pipenv run pytest --cov-report=html --cov=tdd --cov=learning --cov=coverage
+pipenv run pytest --cov-report=html --cov=tdd --cov=learning --cov=coverage --cov=after-the-fact
 ```
 
 Or, to have the runner continously re-run all tests:
@@ -47,6 +47,12 @@ Have a look at the [test_learning.py](learning/test_learning.py) for how I step 
 In this example, I have put together what might be the worst email validator ever. It has a bug you'll need to fix (crashes on null values) and probably it can do with some refactoring.
 
 But first, add in coverage! Add in tests to cover all the lines of code and do so trying to figure out what kind of test cases the code supports. Once you have that in place, you can add a test to show the issue and fix it.
+
+### after-the-fact
+
+In the `after-the-fact` exercise we're doing something similar like in the coverage example but with the difference that we know `what` we want to do but the `why` might not be right. So instead of coverage, we focus on getting tests for the behaviour and then adjust the functionality to match behaviour.
+
+Start in the [after-the-fact/test_practice_after_the_fact.py] and implement tests based on expected behaviour and then fix the existing code to match.
 
 ## troublshooting
 
