@@ -10,10 +10,10 @@ The project uses [pipenv](https://docs.python-guide.org/dev/virtualenvs/) to man
 pipenv install
 ```
 
-You can run the tests by:
+Run tests by:
 
 ```shell script
-pipenv run pytest --cov=. --cov-report html
+pipenv run pytest --cov-report=html --cov=tdd --cov=learning --cov=coverage
 ```
 
 Or, to have the runner continously re-run all tests:
@@ -41,6 +41,12 @@ This practice starts in [test_tdd.py](tdd/test_tdd.py) as we are starting with t
 The learning tests are about using a test suite to drive your development, allowing you to run the code without having to run your entire app. In this example I'm using an open book api and for practice you can use the [Chuck Norris joke API](http://www.icndb.com/api/).
 
 Have a look at the [test_learning.py](learning/test_learning.py) for how I step by step figure out how the API works. Then have a go for yourself in [practice_learning.py](learning/practice_learning.py) using [test_practice_learning.py](learning/test_practice_learning.py) as runner.
+
+### coverage
+
+In this example, I have put together what might be the worst email validator ever. It has a bug you'll need to fix (crashes on null values) and probably it can do with some refactoring.
+
+But first, add in coverage! Add in tests to cover all the lines of code and do so trying to figure out what kind of test cases the code supports. Once you have that in place, you can add a test to show the issue and fix it.
 
 ## troublshooting
 
