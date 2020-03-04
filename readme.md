@@ -4,7 +4,7 @@ An example project showing different types of test.
 
 The idea of this project is to highlight different methods on how to use tests to developer faster and better.
 
-It will be bundled with a presentation as well, but this is `pending`.
+The presentation bundling this repository, explaining more in detail of what this is about can be found on [Speakerdeck](https://speakerdeck.com/ddikman/five-approaches-to-testing).
 
 ## language specific
 
