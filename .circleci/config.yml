@@ -17,11 +17,11 @@ jobs:
             pipenv install --dev
       - run:
           name: Run tests
-          command: pipenv run pytest --junitxml=test_results.xml --cov-report=html --cov=tdd --cov=learning --cov=coverage --cov=after-the-fact
+          command: pipenv run pytest --junitxml=test-results/results.xml --cov-report=html --cov=tdd --cov=learning --cov=coverage --cov=after-the-fact
       - store_test_results:
           path: test_results.xml
       - store_artifacts:
-          path: coverage
+          path: htmlcov
 
 workflows:
   main:
