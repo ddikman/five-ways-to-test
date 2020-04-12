@@ -10,21 +10,11 @@ jobs:
     steps:
       - checkout:
           path: ~/repo
-      - restore_cache:
-          name: Load cache
-          key: pip-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
       - run:
           name: Load dependencies
           command: |
             sudo pip install pipenv
             pipenv install --dev
-      - save_cache:
-          name: Cache dependencies
-          key: pip-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
-          paths:
-            - ".venv"
-            - "/usr/local/bin"
-            - "/usr/local/lib/python3.6/site-packages"
       - run:
           name: Run tests
           command: pipenv run pytest --junitxml=test_results.xml --cov-report=html --cov=tdd --cov=learning --cov=coverage --cov=after-the-fact
