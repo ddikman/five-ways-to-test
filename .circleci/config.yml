@@ -2,7 +2,7 @@ version: 2.1
 
 orbs:
   python: circleci/python@0.2.1
-  sonarcloud: sonarsource/sonarcloud@1.0.1
+  sonarcloud: psl/sonarscanner@0.0.4
 
 jobs:
   build-and-test:
@@ -19,7 +19,9 @@ jobs:
       - run:
           name: Run tests
           command: pipenv run pytest --junitxml=test-results/results.xml --cov-report=html --cov=tdd --cov=learning --cov=coverage --cov=after-the-fact
-      - sonarcloud/scan
+      - psl/sonarscanner:
+          sonar_server_url: https://sonarcloud.io
+          sonar_login: $SONAR_TOKEN
       - store_test_results:
           path: test-results
       - store_artifacts:
