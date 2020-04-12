@@ -5,10 +5,11 @@ orbs:
 
 jobs:
   build-and-test:
-    working_directory: ~/project/python
+    working_directory: ~/repo/python
     executor: python/default
     steps:
-      - checkout
+      - checkout:
+          path: ~/repo
       - restore_cache:
           name: Load cache
           key: deps9-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
