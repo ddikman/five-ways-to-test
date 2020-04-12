@@ -5,15 +5,28 @@ orbs:
 
 jobs:
   build-and-test:
+    working_directory: ~/python
     executor: python/default
     steps:
       - checkout
-      - python/load-cache
-      - python/install-deps
-      - python/save-cache
+      - restore_cache:
+          name: Load cache
+          key: deps9-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
       - run:
-          command: ./manage.py test
-          name: Test
+          name: Load dependencies
+          command: |
+            sudo pip install pipenv
+            pipenv install --dev
+      - save_cache:
+          name: Cache dependencies
+          key: deps9-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
+          paths:
+            - ".venv"
+            - "/usr/local/bin"
+            - "/usr/local/lib/python3.6/site-packages"
+      - run:
+          name: Run tests
+          command: pipenv run pytest --cov-report=html --cov=tdd --cov=learning --cov=coverage --cov=after-the-fact
 
 workflows:
   main:
