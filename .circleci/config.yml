@@ -28,6 +28,8 @@ jobs:
       - run:
           name: Run tests
           command: pipenv run pytest --cov-report=html --cov=tdd --cov=learning --cov=coverage --cov=after-the-fact
+      - store_test_results:
+          path: coverage
 
 workflows:
   main:
