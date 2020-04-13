@@ -1,5 +1,8 @@
 from example_learning import example_parse_some_data, example_get_some_json, example_get_author, example_find_first_author
 
+def test_failing():
+  assert False
+
 # first test, just to see what data we get
 def test_print_output():
   response = example_parse_some_data()
