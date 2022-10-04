@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs:
-  python: circleci/python@0.2.1
+  python: circleci/python@2.0.3
 
 jobs:
   build-and-test:
@@ -10,11 +10,11 @@ jobs:
     steps:
       - checkout:
           path: ~/repo
+      - python/install-packages:
+          pkg-manager: pipenv
       - run:
           name: Load dependencies
-          command: |
-            sudo pip install pipenv
-            pipenv install --dev
+          command: pipenv install --dev
       - run:
           name: Run tests
           command: pipenv run pytest --junitxml=test-results/results.xml --cov-report=html --cov=tdd --cov=learning --cov=coverage --cov=after-the-fact
