@@ -10,6 +10,8 @@ jobs:
     steps:
       - checkout:
           path: ~/repo
+      - python/install-packages:
+          pkg-manager: pip
       - run:
           name: Load dependencies
           command: |
