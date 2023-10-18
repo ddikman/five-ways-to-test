@@ -18,9 +18,9 @@ def test_print_json():
 # now starting to look more like TDD, I set the expectation first then modify the method
 def test_get_author():
   author = example_get_author()
-  assert author == "Robert Martin"
+  assert author == "Robert C. Martin"
 
 # forth test, now I know how to pull data out of it, I can parameterise and start building what I want
 def test_returns_first_author_of_first_match():
   author = example_find_first_author("Clean code")
-  assert author == "Robert Martin"
+  assert author == "Robert C. Martin"
